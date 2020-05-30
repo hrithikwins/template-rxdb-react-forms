@@ -1,13 +1,5 @@
-2020/05/22-08:58:36.436 12f6c Recovering log #12
-2020/05/22-08:58:36.436 12f6c Level-0 table #14: started
-2020/05/22-08:58:36.817 12f6c Level-0 table #14: 312 bytes OK
-2020/05/22-08:58:36.900 12f6c Delete type=0 #12
-2020/05/22-08:58:36.900 12f6c Delete type=3 #10
-2020/05/22-08:58:36.900 12abc Compacting 4@0 + 0@1 files
-2020/05/22-08:58:36.931 12abc Generated table #16@0: 5 keys, 2376 bytes
-2020/05/22-08:58:36.931 12abc Compacted 4@0 + 0@1 files => 2376 bytes
-2020/05/22-08:58:36.968 12abc compacted to: files[ 0 1 0 0 0 0 0 ]
-2020/05/22-08:58:36.968 12abc Delete type=2 #5
-2020/05/22-08:58:36.972 12abc Delete type=2 #8
-2020/05/22-08:58:36.974 12abc Delete type=2 #11
-2020/05/22-08:58:36.974 12abc Delete type=2 #14
+2020/05/30-14:35:00.985 6280 Recovering log #45
+2020/05/30-14:35:00.985 6280 Level-0 table #47: started
+2020/05/30-14:35:01.176 6280 Level-0 table #47: 287 bytes OK
+2020/05/30-14:35:01.456 6280 Delete type=0 #45
+2020/05/30-14:35:01.456 6280 Delete type=3 #43

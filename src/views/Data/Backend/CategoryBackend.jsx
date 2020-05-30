@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React,{Component, useState} from 'react';
 import {createRxDatabase, addRxPlugin} from 'rxdb';
 import { schema } from 'backend/Data/Schema';
 import moment from 'moment';
@@ -10,9 +10,15 @@ addRxPlugin(require('pouchdb-adapter-idb'));
 addRxPlugin(require('pouchdb-adapter-http'));
 
 const syncURL = 'http://localhost:5984/';
-const dbName = 'chatdb';
+const dbName = 'categorydb';
 
 
+
+function Backend() {
+    const [newMessage,setNewMessage]=useState('');
+
+    
+}
 class Backend extends Component {
 
   constructor(props) {
@@ -43,7 +49,7 @@ class Backend extends Component {
       schema: schema
     });
 
-    // set up replication
+    // TODO: set up replication, EDIT this code 
     const replicationState =
       messagesCollection.sync({ remote: syncURL + dbName + '/' });
     this.subs.push(

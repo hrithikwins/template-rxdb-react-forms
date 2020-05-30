@@ -1,25 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import clsx from 'clsx';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import HomeBackground from 'images/home-background.jpg';
 import DrawerBackgroundImage from 'images/drawer-image.jpg';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 import Typography from '@material-ui/core/Typography';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import List from '@material-ui/core/List';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import StorageIcon from '@material-ui/icons/Storage';
+import RestoreIcon from '@material-ui/icons/Restore';
+import AssessmentIcon from '@material-ui/icons/Assessment';
 
 const drawerWidth = 240;
 
@@ -88,6 +85,18 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  icons : {
+    color: "white",
+    textDecoration: "none",
+    fontSize: "50px",
+    margin: "10px",
+  },
+  activeNav : {
+    color: "orange",
+  },
+  inactiveNav : {
+    color: "white",
+  },
 }));
 
 export default function AppBarDrawer() {
@@ -144,11 +153,11 @@ export default function AppBarDrawer() {
       >
         <div className={classes.toolbar}>
           <IconButton color="primary" onClick={handleDrawerClose}>
-             &nbsp;
+            &nbsp;
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </div>
-        <Divider light/>
+        <Divider light />
 
         <DrawerItems />
       </Drawer>
@@ -157,18 +166,27 @@ export default function AppBarDrawer() {
 }
 
 function DrawerItems() {
+  const classes = useStyles();
+  const [path, setPath] = useState(false)
+
+  function dashboardClick() {
+    setPath(true);
+  }
+  const dash= path ? <DashboardIcon className={classes.icons}/> : <StorageIcon />;
   return (
     <>
-    <NavLink to="/home/dashboard" activeClassName="selected">
-  dashboard
-</NavLink>
-<NavLink to="/home/data" activeClassName="selected">
-data
-</NavLink><NavLink to="/home/transaction" activeClassName="selected">
-transaction
-</NavLink><NavLink to="/home/report" activeClassName="selected">
-report
-</NavLink>
-</>
+      <NavLink to="/home/dashboard" onClick={dashboardClick} >
+        {dash}
+      </NavLink>  
+      <NavLink to="/home/data" activeClassName="selected">
+        <StorageIcon className={clsx(classes.icons)}/>
+      </NavLink>  
+      <NavLink to="/home/transaction" activeClassName="selected">
+        <RestoreIcon className={clsx(classes.icons)}/>
+      </NavLink>  
+      <NavLink to="/home/report" activeClassName="selected">
+        <AssessmentIcon className={clsx(classes.icons)}/>
+      </NavLink>    
+    </>
   );
 }
