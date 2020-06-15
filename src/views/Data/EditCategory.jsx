@@ -17,7 +17,7 @@ require('@babel/polyfill');
 addRxPlugin(require('pouchdb-adapter-idb'));
 addRxPlugin(require('pouchdb-adapter-http'));
 
-const syncURL = 'http://localhost:5984/';
+const syncURL = 'http://localhost:5985/';
 const dbName = 'categorydb';
 const source = ['Category 1', 'Category 2', 'Category 3'];
 const names$ = of(source);
