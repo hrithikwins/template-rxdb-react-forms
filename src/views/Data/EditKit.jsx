@@ -2,7 +2,6 @@ import React from "react";
 
 import GridItem from "components/Grid/GridItem";
 import GridContainer from "components/Grid/GridContainer";
-import Button from "components/CustomButtons/Button";
 import Card from "components/Card/Card";
 import CardBody from "components/Card/CardBody";
 
