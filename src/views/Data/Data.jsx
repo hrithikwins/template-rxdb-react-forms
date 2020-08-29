@@ -111,7 +111,7 @@ function DataHome() {
             <h4 className={classes.cardTitleWhite}>DATA MANAGEMENT</h4>
             <p className={classes.cardCategoryWhite}>
               <u><strong>ADD</strong> button</u> to ADD new details and view information at a glance<br/>
-            <u><strong>CHANGE</strong> button</u> to VIEW EDIT and DELETE the data from the category<br/>
+            <u><strong>VIEW</strong> button</u> to VIEW EDIT and DELETE the data from the category<br/>
             </p>
           </CardHeader>
           <CardBody>
@@ -121,16 +121,12 @@ function DataHome() {
               <CompanyMaster />
               <DoctorMaster />
               <GenericMaster />
-
-              {/* <KitMaster /> commented currently */}
               <PatientMaster />
               <ProductMaster />
-
               <ScheduleDrugMaster />
               <StaffMaster />
               <SupplierMaster />
-
-
+              
             </GridContainer>
         </CardBody>
       </Card>
@@ -172,7 +168,7 @@ function ProductMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -212,7 +208,7 @@ function CompanyMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -252,7 +248,7 @@ function SupplierMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -292,7 +288,7 @@ function CategoryMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -333,7 +329,7 @@ function DoctorMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -373,7 +369,7 @@ function PatientMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -413,7 +409,7 @@ function GenericMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -453,7 +449,7 @@ function KitMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -494,7 +490,7 @@ function StaffMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -534,7 +530,7 @@ function ScheduleDrugMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>
@@ -574,7 +570,7 @@ function BlankMaster() {
             </GridItem>
             <GridItem xs={5} sm={5} md={5}>
               <Button color="warning" onClick={LaunchUpdate}>
-                CHANGE
+                VIEW
               </Button>
             </GridItem>
           </GridContainer>

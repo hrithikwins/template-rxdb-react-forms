@@ -1,3 +1,13 @@
+# Open Source React.js + RxDB forms entry Example
+
+RxDB is a plugin used to store data as Indexed Databases in The Browser and has capability
+of unlimited storage as Indexed Databases in the disk through browser
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
